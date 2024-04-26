@@ -1,0 +1,20 @@
+#server:
+#  servlet:
+#    context-path: /api/v1
+
+spring:
+#  datasource:
+#    url: jdbc:h2:mem:testdb
+#    driver-class-name: org.h2.Driver
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=ecommerce-demo;encrypt=true;TrustServerCertificate=true;
+    username: admin
+    password: '@Du99fpt@1234'
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+token:
+  signing:
+    key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
